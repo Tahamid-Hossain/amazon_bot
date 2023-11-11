@@ -16,9 +16,6 @@ public class EmailSender {
         // Specify the sender's email address
         String from = "amazonbotcud@gmail.com";
 
-        // Specify the mail server host (localhost in this case)
-        String host = "localhost";
-
         // Create a Properties object to configure email properties
         Properties properties = new Properties();
 
