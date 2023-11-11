@@ -37,14 +37,16 @@ public class WebScraper {
 
         // Loop through the specified number of products
         for (int i = 1; i <= nProducts; i++) {
+
+            // Extract the product title from the search page
+            String product = page.locator("(//span[contains(@class,'a-size-base-plus a-color-base')])[%s]".formatted(i)).textContent();
+            // Print the product title to the console
+            System.out.println(product);
+            
             // Click on the product to navigate to its details page
             page.locator("(//span[contains(@class,'a-size-base-plus a-color-base')])[%s]".formatted(i)).click();
 
-            // Extract the product title from the details page
-            String product = page.locator("#productTitle").textContent();
-
-            // Print the product title to the console
-            System.out.println(product);
+            
 
             // Extract the product price from the details page
             String price = page.locator("(//span[@class='a-offscreen'])[1]").textContent();
