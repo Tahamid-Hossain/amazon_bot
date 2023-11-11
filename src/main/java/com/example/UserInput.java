@@ -11,7 +11,7 @@ public class UserInput {
     }
 
     public String askForProductName() {
-        System.out.println("Enter product name: ");
+        System.out.println("Enter a keyword: ");
         return scanner.nextLine();
     }
 

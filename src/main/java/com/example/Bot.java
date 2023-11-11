@@ -1,4 +1,4 @@
-// Bot.java
+
 package com.example;
 
 public class Bot {

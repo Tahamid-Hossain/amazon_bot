@@ -29,7 +29,8 @@ public class EmailSender {
             message.setFrom(new InternetAddress(from));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject("Your product results");
-            message.setText("Product1: " + productInfo.getTitle() + "Price: " + productInfo.getPrice());
+            message.setText(productInfo.getTitle());
+            //message.setText("Product1: " + productInfo.getTitle() + "Price: " + productInfo.getPrice());
 
             Transport.send(message);
 
