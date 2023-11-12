@@ -11,7 +11,8 @@ public class Bot {
         UserInput userInput = new UserInput();
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt the user to enter the product name and store it in the productName variable
+        // Prompt the user to enter the product name and store it in the productName
+        // variable
         String productName = userInput.askForProductName();
 
         // Initialize nProducts to handle scope outside the loop
@@ -20,12 +21,13 @@ public class Bot {
         // Keep prompting the user until a valid input is provided
         while (true) {
             try {
-                // Prompt the user to enter the number of products and store it in the nProducts variable
+                // Prompt the user to enter the number of products and store it in the nProducts
+                // variable
                 nProducts = userInput.askForNumberOfProducts();
 
                 // Check if nProducts is within the valid range of 1 to 10
                 if (nProducts >= 1 && nProducts <= 10) {
-                    break;  // Exit the loop if the input is valid
+                    break; // Exit the loop if the input is valid
                 } else {
                     // Throw an exception with a descriptive message for an invalid input range
                     throw new IllegalArgumentException("Number of products must be between 1 and 10.");
@@ -36,6 +38,9 @@ public class Bot {
                 System.out.println("Please enter a valid value.");
             }
         }
+
+        // Close the Scanner resource to prevent resource leaks
+        scanner.close();
 
         // Create an instance of the WebScraper class to handle web scraping
         WebScraper webScraper = new WebScraper();
