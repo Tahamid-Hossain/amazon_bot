@@ -55,7 +55,7 @@ public class WebScraper {
             System.out.println(price);
 
             // Construct a string containing product details (title, price, and URL)
-            String productDetails = "Product %s:".formatted(i) + product + "\n" + "Price: " + price + "\n" + "URL:"
+            String productDetails = "Product %s: ".formatted(i) + product + "\n" + "Price: " + price + "\n" + "URL:"
                     + page.url() + "\n\n\n";
 
             // Append the product details string to the overall products string
